@@ -1,1 +1,326 @@
-const _0x5e23=['timCost','sockets','ores','path','wild','28059QSUgGp','135659EHRkqZ','./models/Plr','wrong\x20pass','914260SIOqap','lean','124167LFyNVb','moreOre','miner','findOne','timLevel','connection','disconnect','6emQxAD','listen','catch','static','then','./models/admin','admin','\x20has\x20joined\x20the\x20server\x20@\x20','donateF','donated','clicker\x20game\x20addict','sendUser','socket.io','PORT','67406JGNZms','2UcSacy','listening\x20@\x20%d','5YwPXPy','use','createServer','splice','mongodb+srv://soham:01010011@multi-mining.v2v2e.mongodb.net/player-data?retryWrites=true&w=majority','exists','autoMine','mineLevel','loggedin','length','totalMined','emit','indexOf','updateOne','http','existedEntry','username','28FImNaV','getValues','reqData','stringify','log','mongoose','\x20has\x20been\x20added\x20to\x20the\x20database','password','exec','find','express','parse','75337OKfZdC','join','23308rtPryF'];const _0x5ecf69=_0x4155;(function(_0x25a54c,_0x3b8777){const _0x43935e=_0x4155;while(!![]){try{const _0x45a975=parseInt(_0x43935e(0x114))*-parseInt(_0x43935e(0x133))+-parseInt(_0x43935e(0x13d))+parseInt(_0x43935e(0x13f))+-parseInt(_0x43935e(0x125))*-parseInt(_0x43935e(0x139))+-parseInt(_0x43935e(0x112))*-parseInt(_0x43935e(0x111))+parseInt(_0x43935e(0x131))*parseInt(_0x43935e(0x103))+parseInt(_0x43935e(0x13a));if(_0x45a975===_0x3b8777)break;else _0x25a54c['push'](_0x25a54c['shift']());}catch(_0x53e96d){_0x25a54c['push'](_0x25a54c['shift']());}}}(_0x5e23,0x92da8));const express=require(_0x5ecf69(0x12f)),path=require(_0x5ecf69(0x137)),http=require(_0x5ecf69(0x122)),socketIO=require(_0x5ecf69(0x10f)),{setInterval}=require('timers'),mongoose=require(_0x5ecf69(0x12a)),Plr=require(_0x5ecf69(0x13b)),Admin=require(_0x5ecf69(0x108)),publicPath=path[_0x5ecf69(0x132)](__dirname,'/public'),port=process['env'][_0x5ecf69(0x110)]||0xfa0,dbURI=_0x5ecf69(0x118);let app=express(),server=http[_0x5ecf69(0x116)](app),io=socketIO(server);mongoose['connect'](dbURI,{'useNewUrlParser':!![],'useUnifiedTopology':!![]})[_0x5ecf69(0x107)](_0xbd4797=>server[_0x5ecf69(0x104)](port,()=>{const _0x1029d9=_0x5ecf69;console['log'](_0x1029d9(0x113),port),console[_0x1029d9(0x129)]('connected\x20to\x20database');}))['catch'](_0x43c70d=>console[_0x5ecf69(0x129)](_0x43c70d));var players=[],avOre=0xa,maxOre=0xa,timL=0x0,oreL=0x1,oreCost=0x0,timCost=0x0,tim=0x3c,regenProgress=0x0;Admin[_0x5ecf69(0x142)]({'username':_0x5ecf69(0x109)},function(_0x475efe,_0x435cb8){const _0x5907b5=_0x5ecf69;let _0x42beff=JSON[_0x5907b5(0x130)](JSON[_0x5907b5(0x128)](_0x435cb8));oreCost=_0x42beff['oreCost'],timCost=_0x42beff[_0x5907b5(0x134)],timL=_0x42beff[_0x5907b5(0x143)],oreL=_0x42beff['oreLevel'];let _0x12287d=0x0;for(var _0x3389aa=0x1;_0x3389aa<oreL;_0x3389aa++){_0x12287d+=_0x3389aa;}maxOre=0xa+_0x12287d,avOre=maxOre,tim<=0xa&&(tim=0xa,timCost=0x0);}),app[_0x5ecf69(0x115)](express[_0x5ecf69(0x106)](publicPath)),io['on'](_0x5ecf69(0x144),_0x5d9442=>{_0x5d9442['on']('login',(_0x5b493d,_0x52465c)=>{const _0x564401=_0x4155;Plr[_0x564401(0x119)]({'username':_0x5b493d},function(_0x4d6811,_0x159967){const _0x3b58c9=_0x564401;_0x4d6811&&console['log'](_0x4d6811);if(_0x159967)Plr[_0x3b58c9(0x142)]({'username':_0x5b493d})[_0x3b58c9(0x13e)]()[_0x3b58c9(0x12d)](function(_0x2593b5,_0xe8d599){const _0x5185c7=_0x3b58c9;let _0x5c4f4e=JSON['parse'](JSON[_0x5185c7(0x128)](_0xe8d599));if(_0x52465c==_0x5c4f4e[_0x5185c7(0x12c)]){let _0x245a9c=players[_0x5185c7(0x12e)](_0x1b0a13=>_0x1b0a13[_0x5185c7(0x124)]==_0x5b493d);_0x245a9c?_0x5d9442['emit'](_0x5185c7(0x123)):_0x5d9442[_0x5185c7(0x11f)](_0x5185c7(0x11c),_0x5c4f4e[_0x5185c7(0x124)]);}else _0x5d9442[_0x5185c7(0x11f)](_0x5185c7(0x13c));});else{const _0x42ee97=new Plr({'username':_0x5b493d,'password':_0x52465c,'ores':0x0,'donated':0x0,'totalMined':0x0,'autoMine':![],'mineLevel':0x1});_0x42ee97['save']()[_0x3b58c9(0x107)](_0x2219a2=>{const _0x5a01df=_0x3b58c9;console[_0x5a01df(0x129)](_0x5b493d+_0x5a01df(0x12b)),_0x5d9442[_0x5a01df(0x11f)](_0x5a01df(0x11c),_0x5b493d);})[_0x3b58c9(0x105)](_0x3eb64e=>{const _0x546acd=_0x3b58c9;console[_0x546acd(0x129)](JSON[_0x546acd(0x130)](JSON[_0x546acd(0x128)](res)));}),console['log'](_0x5b493d+_0x3b58c9(0x10a)+_0x5d9442['id']);}}),io[_0x564401(0x135)][_0x564401(0x11f)](_0x564401(0x126),players[_0x564401(0x11d)],avOre,oreCost,timCost);});}),io['on'](_0x5ecf69(0x144),_0x958908=>{const _0x40ae3d=_0x5ecf69;_0x958908['on'](_0x40ae3d(0x102),()=>{const _0x1c9ca1=_0x40ae3d;let _0x1009c5=players[_0x1c9ca1(0x12e)](_0xdefa44=>_0xdefa44['id']==_0x958908['id']);_0x1009c5&&(updP(_0x1009c5),players[_0x1c9ca1(0x117)](players[_0x1c9ca1(0x120)](_0x1009c5),0x1),io[_0x1c9ca1(0x135)][_0x1c9ca1(0x11f)](_0x1c9ca1(0x126),players[_0x1c9ca1(0x11d)],avOre,oreCost,timCost));});});function mine(_0x2b792d){const _0x129a6a=_0x5ecf69;let _0x34fb2a=_0x2b792d[_0x129a6a(0x11b)],_0x3f571d=0x0;for(var _0x48033c=0x0;_0x48033c<_0x34fb2a;_0x48033c++){avOre>0x0&&(avOre--,_0x3f571d++);}_0x2b792d[_0x129a6a(0x136)]+=_0x3f571d,_0x2b792d[_0x129a6a(0x11e)]+=_0x3f571d,io['sockets']['emit'](_0x129a6a(0x126),players['length'],avOre,oreCost,timCost),io['sockets'][_0x129a6a(0x11f)](_0x129a6a(0x138),_0x2b792d[_0x129a6a(0x136)],_0x2b792d['id']);}io['on'](_0x5ecf69(0x144),_0x242a08=>{const _0x4ae090=_0x5ecf69;_0x242a08['on'](_0x4ae090(0x141),()=>{const _0x49291a=_0x4ae090;let _0x52682d=players['find'](_0x24053b=>_0x24053b['id']==_0x242a08['id']),_0x268dbb=players[_0x49291a(0x120)](players[_0x49291a(0x12e)](_0x57e107=>_0x57e107['id']==_0x242a08['id']));setTimeout(mine,0x1388,_0x52682d);});}),io['on'](_0x5ecf69(0x144),_0x1c9c11=>{const _0x20ea73=_0x5ecf69;_0x1c9c11['on'](_0x20ea73(0x127),(_0x51631d,_0x43c372)=>{const _0x15be32=_0x20ea73;Plr[_0x15be32(0x142)]({'username':_0x51631d},function(_0x144482,_0x3a0184){const _0x256d11=_0x15be32;let _0x335426=JSON[_0x256d11(0x130)](JSON[_0x256d11(0x128)](_0x3a0184));_0x335426[_0x256d11(0x12c)]==_0x43c372?(_0x335426['id']=_0x1c9c11['id'],players['push'](_0x335426),_0x1c9c11[_0x256d11(0x11f)](_0x256d11(0x10e),_0x335426[_0x256d11(0x124)],_0x335426['ores'],_0x335426[_0x256d11(0x11b)],_0x335426[_0x256d11(0x11a)]),_0x1c9c11[_0x256d11(0x11f)]('plus'),io['sockets']['emit'](_0x256d11(0x126),players[_0x256d11(0x11d)],avOre,oreCost,timCost)):_0x1c9c11[_0x256d11(0x11f)]('niceTry');});});}),io['on'](_0x5ecf69(0x144),_0x207739=>{const _0x491ec3=_0x5ecf69;_0x207739['on'](_0x491ec3(0x11a),()=>{const _0x396a0e=_0x491ec3;let _0x41e08b=players[_0x396a0e(0x12e)](_0x490303=>_0x490303['id']==_0x207739['id']);_0x41e08b[_0x396a0e(0x11a)]?console[_0x396a0e(0x129)](_0x396a0e(0x10d)):_0x41e08b[_0x396a0e(0x136)]>0x5&&(_0x41e08b['autoMine']=!![],_0x41e08b[_0x396a0e(0x136)]-=0x5);let _0x161c27=_0x41e08b;_0x207739[_0x396a0e(0x11f)](_0x396a0e(0x10e),_0x161c27[_0x396a0e(0x124)],_0x161c27[_0x396a0e(0x136)],_0x161c27[_0x396a0e(0x11b)],_0x161c27[_0x396a0e(0x11a)]),io[_0x396a0e(0x135)][_0x396a0e(0x11f)](_0x396a0e(0x126),players['length'],avOre,oreCost,timCost);});}),io['on'](_0x5ecf69(0x144),_0x19ee79=>{_0x19ee79['on']('donateM',()=>{const _0x4d7005=_0x4155;let _0x4b2d70=players[_0x4d7005(0x12e)](_0x5be6e3=>_0x5be6e3['id']==_0x19ee79['id']);_0x4b2d70[_0x4d7005(0x136)]>=oreCost?(_0x4b2d70['ores']-=oreCost,oreL++,_0x4b2d70[_0x4d7005(0x10c)]+=oreCost,oreCost=oreL/0x2*0xa+oreL*oreL):(_0x4b2d70[_0x4d7005(0x10c)]+=_0x4b2d70['ores'],oreCost-=_0x4b2d70[_0x4d7005(0x136)],_0x4b2d70['ores']=0x0,oreCost<=0x0&&(oreL++,oreCost+=oreL/0x2*0xa+oreL*oreL));let _0x4ee648=_0x4b2d70;_0x19ee79['emit'](_0x4d7005(0x10e),_0x4ee648[_0x4d7005(0x124)],_0x4ee648[_0x4d7005(0x136)],_0x4ee648['mineLevel'],_0x4ee648[_0x4d7005(0x11a)]),io[_0x4d7005(0x135)][_0x4d7005(0x11f)](_0x4d7005(0x126),players['length'],avOre,oreCost,timCost);});}),io['on'](_0x5ecf69(0x144),_0x1523df=>{const _0x47c5b2=_0x5ecf69;_0x1523df['on'](_0x47c5b2(0x10b),()=>{const _0x3ec15a=_0x47c5b2;let _0x5cf2ce=players[_0x3ec15a(0x12e)](_0x19db5f=>_0x19db5f['id']==_0x1523df['id']);_0x5cf2ce[_0x3ec15a(0x136)]>=timCost?(_0x5cf2ce[_0x3ec15a(0x136)]-=timCost,_0x5cf2ce['donated']+=timCost,timL++,timCost=0x5a*(timL*timL)):(_0x5cf2ce[_0x3ec15a(0x10c)]+=_0x5cf2ce[_0x3ec15a(0x136)],timCost-=_0x5cf2ce[_0x3ec15a(0x136)],_0x5cf2ce[_0x3ec15a(0x136)]=0x0,timCost<=0x0&&(timL++,timCost=0x5a*(timL*timL)));let _0x52aa03=_0x5cf2ce;_0x1523df['emit']('sendUser',_0x52aa03[_0x3ec15a(0x124)],_0x52aa03[_0x3ec15a(0x136)],_0x52aa03[_0x3ec15a(0x11b)],_0x52aa03['autoMine']),io[_0x3ec15a(0x135)][_0x3ec15a(0x11f)](_0x3ec15a(0x126),players[_0x3ec15a(0x11d)],avOre,oreCost,timCost);});}),io['on'](_0x5ecf69(0x144),_0x1ef2c9=>{const _0x3a054c=_0x5ecf69;_0x1ef2c9['on'](_0x3a054c(0x140),()=>{const _0x5510d8=_0x3a054c;let _0x10b4d3=players['find'](_0x2a7404=>_0x2a7404['id']==_0x1ef2c9['id']),_0x46a8dc=_0x10b4d3[_0x5510d8(0x11b)]*0x32*(_0x10b4d3[_0x5510d8(0x11b)]/0x2);if(_0x10b4d3['ores']>=_0x46a8dc)_0x10b4d3[_0x5510d8(0x136)]-=_0x46a8dc,_0x10b4d3[_0x5510d8(0x11b)]++;else{}let _0x3ec3ae=_0x10b4d3;_0x1ef2c9[_0x5510d8(0x11f)]('sendUser',_0x3ec3ae[_0x5510d8(0x124)],_0x3ec3ae[_0x5510d8(0x136)],_0x3ec3ae[_0x5510d8(0x11b)],_0x3ec3ae[_0x5510d8(0x11a)]),io[_0x5510d8(0x135)][_0x5510d8(0x11f)](_0x5510d8(0x126),players['length'],avOre,oreCost,timCost);});});function generateOre(){const _0x2c6f8a=_0x5ecf69;avOre=maxOre,io[_0x2c6f8a(0x135)][_0x2c6f8a(0x11f)](_0x2c6f8a(0x126),players['length'],avOre,oreCost,timCost);}function updServ(){const _0x528a0d=_0x5ecf69;var _0xa297ae=oreL,_0x5197f7=timL,_0x4cad08=oreCost,_0x469eab=timCost;for(var _0x629dbf=0x0;_0x629dbf<oreL;_0x629dbf++){maxOre=0xa+_0x629dbf;}tim=0x3c-timL,Admin[_0x528a0d(0x121)]({'username':_0x528a0d(0x109)},{'oreLevel':_0xa297ae,'timLevel':_0x5197f7,'oreCost':_0x4cad08,'timCost':_0x469eab},function(_0x5c8282,_0x201a11){});}function updP(_0x7f8dd3){const _0xbd12cd=_0x5ecf69;_0x7f8dd3&&Plr[_0xbd12cd(0x121)]({'username':_0x7f8dd3['username']},{'ores':_0x7f8dd3[_0xbd12cd(0x136)],'donated':_0x7f8dd3[_0xbd12cd(0x10c)],'autoMine':_0x7f8dd3['autoMine'],'totalMined':_0x7f8dd3['totalMined'],'mineLevel':_0x7f8dd3[_0xbd12cd(0x11b)]},function(_0x3e60d7,_0x52294e){});}function _0x4155(_0x46f0fd,_0x247baf){_0x46f0fd=_0x46f0fd-0x102;let _0x5e237e=_0x5e23[_0x46f0fd];return _0x5e237e;}function autos(){const _0x5c0d76=_0x5ecf69;for(var _0x4f1dad=0x0;_0x4f1dad<players['length'];_0x4f1dad++){players[_0x4f1dad][_0x5c0d76(0x11a)]&&mine(players[_0x4f1dad]);}}function updateP(){const _0x3a2d26=_0x5ecf69;let _0x11b099=players[updater];updP(_0x11b099),updater++;updater>=players[_0x3a2d26(0x11d)]&&(updater=0x0);if(players[_0x3a2d26(0x11d)]>0x32){let _0x15ff7c=players[updater];updP(_0x15ff7c),updater++;updater>=players['length']&&(updater=0x0);if(players['length']>0x64){let _0x57c390=players[updater];updP(_0x57c390),updater++,updater>=players[_0x3a2d26(0x11d)]&&(updater=0x0);}}}function generOre(){regenProgress++,tim=0x3c+0x1-timL,regenProgress>=tim&&(generateOre(),regenProgress=0x0);}var updater=0x0;setInterval(generOre,0x3e8),setInterval(updServ,0x2710),setInterval(autos,0x1388),setInterval(updateP,0x7d0),setInterval(function(){regenProgress++;if(regenProgress<tim)return;regenProgress=0x0,generateOre();},0x3e8);
+                                        //Initiation
+                                            //requires
+const express = require('express');             //middle-ware
+const path = require('path');                   //for http
+const http = require('http');                   //http
+const socketIO = require('socket.io');          //bi-directional communication
+const { setInterval } = require('timers');      //timer
+const mongoose = require('mongoose');           //for mongoDB
+const Plr = require('./models/Plr');          //model for database
+const Admin = require('./models/admin');
+                                            //declarations
+const publicPath= path.join(__dirname, '/public');      //for http
+const port=process.env.PORT || 4000;                    //for http
+const dbURI = 'mongodb+srv://soham:01010011@multi-mining.v2v2e.mongodb.net/player-data?retryWrites=true&w=majority';
+let app = express();                                    //application
+let server = http.createServer(app);                    //nodejs server with http and express app
+let io = socketIO(server);                              //a socket on ^
+
+mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true}) //mongoDB connection
+.then((result)=> server.listen(port, () => {                 //nodejs constant eventlistener
+    console.log('listening @ %d',port);
+    console.log('connected to database');
+}))
+.catch((err) => console.log(err));
+
+var players=[];
+var events=[];
+
+var avOre=10;
+var maxOre=10;
+var timL=0;
+var oreL=1;
+var oreCost=0;
+var timCost=0;
+
+var tim = 60;
+var regenProgress = 0;
+
+Admin.findOne({username:"admin"}, function(err,res){
+    let admin = JSON.parse((JSON.stringify(res)));
+
+    oreCost =admin.oreCost;
+    timCost =admin.timCost;
+    timL=admin.timLevel;
+    oreL=admin.oreLevel;
+    let a =0;
+    for(var i = 1; i<oreL;i++){
+        a+=i;
+    }
+    maxOre=10+a;
+    avOre=maxOre;
+    if(tim<=10){
+        tim=10;
+        timCost=0;
+    }
+
+});
+
+app.use(express.static(publicPath));        //middle-ware directory for public website
+
+io.on('connection', (socket) => {           //entrance event login.js
+    socket.on('login', (name,pass) => {          //listening for name
+        
+        Plr.exists({username:name}, function (err, exist){
+            if(err){
+                console.log(err);
+            }
+            if(exist){
+                Plr.findOne({ username:name}).lean().exec(function (err, res) {
+                let user=JSON.parse((JSON.stringify(res)));    
+                    if(pass==user.password){
+                        let b=players.find(obj=>obj.username==name);
+                        if(b){
+                            socket.emit('existedEntry');
+                        }else{                   
+                            socket.emit('loggedin',user.username);
+                        }
+                    } else{
+                        socket.emit('wrong pass');
+                    }
+                }
+            )}else{
+            const user = new Plr({
+                username: name,
+                password: pass,
+                ores: 0,
+                donated: 0,
+                totalMined: 0,
+                autoMine: false,
+                mineLevel: 1
+            });
+    
+            user.save()
+                .then((result) => {
+                    console.log(name + ' has been added to the database');
+                    socket.emit('loggedin',name);
+                })
+                .catch((err)=>{
+                    console.log(JSON.parse((JSON.stringify(res))));
+                });
+            console.log(name+' has joined the server @ ' + socket.id);
+            }
+        })
+        io.sockets.emit('getValues', players.length, avOre,oreCost,timCost);
+    });    
+});
+
+io.on('connection', (socket) =>{            //logout
+    socket.on('disconnect', ()=>{
+        let b=players.find(obj=>obj.id==socket.id);
+        if(b){
+            updP(b);
+            players.splice(players.indexOf(b),1);
+            io.sockets.emit('getValues', players.length, avOre,oreCost,timCost);
+        }
+    });
+});
+
+function mine(p){                            //mine
+    let b=p.mineLevel;
+    let mined=0;
+    for(var a = 0; a<b;a++){
+        if(avOre>0){
+            avOre--;
+            mined++;
+        }
+    }
+    p.ores+=mined;
+    p.totalMined+=mined;
+    io.sockets.emit('getValues', players.length, avOre,oreCost,timCost);
+    io.sockets.emit('wild',p.ores,p.id);
+}
+
+io.on('connection',(socket)=>{              //listening for miner   
+    socket.on('miner', ()=>{                
+        let player=players.find(obj=>obj.id==socket.id);
+        let i = players.indexOf(players.find(obj=>obj.id==socket.id));
+        setTimeout(mine,5000,player);
+    })
+})
+
+io.on('connection', (socket)=>{             //listening for reqData
+    socket.on('reqData', (name,pass)=>{
+
+        Plr.findOne({username:name}, function(err,res){
+            let user=JSON.parse((JSON.stringify(res)));
+            if(user.password==pass){
+            
+                user.id=socket.id;
+                players.push(user);
+                socket.emit('sendUser',user.username,user.ores,user.mineLevel,user.autoMine);
+                socket.emit('plus');
+                io.sockets.emit('getValues', players.length,avOre,oreCost,timCost);
+            }else{
+                socket.emit('niceTry');
+            }
+        });
+        
+    });
+});
+
+io.on('connection',(socket)=>{              //listening for autoMine
+    socket.on('autoMine', ()=>{
+        let player=players.find(obj=>obj.id==socket.id);
+        if(player.autoMine){
+            console.log('clicker game addict');
+        }else{
+            if(player.ores>5){
+                player.autoMine=true;
+                player.ores-=5;
+            }
+        }
+        let user = player;
+        socket.emit('sendUser',user.username,user.ores,user.mineLevel,user.autoMine);
+        io.sockets.emit('getValues', players.length,avOre,oreCost,timCost);
+    })
+})
+
+io.on('connection', (socket)=>{             //listening for donateM
+    socket.on('donateM', ()=>{
+        let player=players.find(obj=>obj.id==socket.id);
+        if(player.ores>=oreCost){
+            player.ores-=oreCost;
+            oreL++;
+            player.donated+=oreCost;
+            oreCost=oreL/2*10+(oreL*oreL);
+        } else{
+            player.donated+=player.ores;
+            oreCost-=player.ores;
+            player.ores=0;
+            if(oreCost<=0){
+                oreL++;
+                oreCost+=oreL/2*10+(oreL*oreL);
+            }
+        }    
+        let user = player;
+        socket.emit('sendUser',user.username,user.ores,user.mineLevel,user.autoMine);
+        io.sockets.emit('getValues', players.length,avOre,oreCost,timCost);
+    })
+})
+
+io.on('connection', (socket)=>{             //listening to donateF
+    socket.on('donateF', ()=>{
+        let player=players.find(obj=>obj.id==socket.id);
+        if(player.ores>=timCost){
+            player.ores-=timCost;
+            player.donated+=timCost;
+            timL++;
+            timCost=90*(timL*timL);
+        } else{
+            player.donated+=player.ores;
+            timCost-=player.ores;
+            player.ores=0;
+            if(timCost<=0){
+                timL++;
+                timCost=90*(timL*timL);
+            }
+        }    
+        let user = player;
+        socket.emit('sendUser',user.username,user.ores,user.mineLevel,user.autoMine);
+        io.sockets.emit('getValues', players.length,avOre,oreCost,timCost);
+    })
+})
+
+io.on('connection', (socket)=>{                                 //moreOre
+    socket.on('moreOre',()=>{
+        let player=players.find(obj=>obj.id==socket.id);
+        let cost = player.mineLevel * 50 * (player.mineLevel/2);
+        if(player.ores>=cost){
+            player.ores-=cost;
+            player.mineLevel++;
+        } else{
+            //loser
+        }
+        let user = player;
+        socket.emit('sendUser',user.username,user.ores,user.mineLevel,user.autoMine);
+        io.sockets.emit('getValues', players.length,avOre,oreCost,timCost);
+    })
+})
+
+function generateOre(){                     //global resource
+    maxOre=10;
+    for(var i =0;i<=oreL;i++){
+        maxOre+=i;
+    }
+    avOre=maxOre;
+    io.sockets.emit('getValues', players.length,avOre,oreCost,timCost);
+}
+
+function updServ(){
+    var l = oreL;
+    var f = timL;
+    var o = oreCost;
+    var t = timCost;
+    for (var i = 0;i<oreL;i++){
+        maxOre=10+i
+    }
+    tim=60-timL;
+    Admin.updateOne({username:"admin"},{oreLevel:l,timLevel:f,oreCost:o,
+        timCost:t},function(err,res){
+        });
+}
+
+function updP(p){
+    if(p){
+        Plr.updateOne({username:p.username},{ores:p.ores,donated:p.donated,autoMine:p.autoMine,
+            totalMined:p.totalMined,mineLevel:p.mineLevel},function(err,res){});
+    }
+}
+
+function autos(){
+    for(var i = 0;i<players.length;i++){
+        if(players[i].autoMine){
+            mine(players[i]);
+        }
+    }
+}
+
+function updateP(){
+    let p=players[updater];
+    updP(p);
+    updater++;
+    if(updater>=players.length){
+        updater=0;
+    }
+    if(players.length>50){
+        let p=players[updater];
+        updP(p);
+        updater++;
+        if(updater>=players.length){
+            updater=0;
+        }
+        if(players.length>100){
+            let p=players[updater];
+            updP(p);
+            updater++;
+            if(updater>=players.length){
+                updater=0;
+            }
+        }
+    }
+}
+
+function generOre(){
+    regenProgress++;
+    tim=60+1-timL;
+    if(regenProgress>=tim){
+        generateOre();
+        regenProgress=0;
+    }
+}
+
+//timer
+var updater=0;
+
+setInterval(generOre,1000);
+setInterval(updServ,10000);
+setInterval(autos,5000);
+setInterval(updateP,2000);
+
+setInterval(function() {
+    regenProgress++;
+    if(regenProgress < tim) return;
+    regenProgress = 0;
+    generateOre();
+}, 1000);
